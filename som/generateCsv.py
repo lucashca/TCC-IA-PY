@@ -39,6 +39,7 @@ try:
                 groups = int(arg[2])
         if(arg[3]):
                 hasIndex = True
+                
         
 
 
@@ -67,7 +68,7 @@ colunNumber = len(header)
 __dir = './datasets/'
 
 def generateRow(j):
-    global colunNumber,hasIndex
+    global colunNumber,hasIndex,groups
     row = []
     for i in range(colunNumber):
         a = random.randint(1,100)*0.01
@@ -79,6 +80,10 @@ def generateRow(j):
         #if(j%2==0):
         #       val = round(j*5 + a + b,2)         
         val = round(j*20 + a,2)         
+  
+        if(groups == 0):
+                val = round(random.randint(1,100)*0.01 + random.randint(0,5),2)
+                
         row.append(val)
     return row
 

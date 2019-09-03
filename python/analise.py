@@ -23,6 +23,8 @@ def parseInt(var):
 
 
 
+
+
 arg = sys.argv[1]
 
 ### Paramters for som
